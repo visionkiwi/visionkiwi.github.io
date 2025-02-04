@@ -59,6 +59,9 @@ params:
     favicon: /favicon.ico
         # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
 
+
+
+
     footer:
         since: 
         customText: <a href="https://beian.miit.gov.cn/" target="_blank">备案号</a>
