@@ -2,7 +2,7 @@ baseurl: https://visionkiwi.github.io
 languageCode: en-us
 theme: hugo-theme-stack
 title: Example Site
-copyright: 渝ICP备2023007666号-1
+copyright: 
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
@@ -22,11 +22,11 @@ languages:
                 subtitle: Example description
     zh-cn:
         languageName: 简体中文
-        title: Vision
+        title: Vision | Sec
         weight: 2
         params:
             sidebar:
-                subtitle: 欢迎光临！！
+                subtitle: 买不起房子那就在网上安家吧
     ar:
         languageName: عربي
         languagedirection: rtl
@@ -45,7 +45,7 @@ services:
         id:
 
 pagination:
-    pagerSize: 2
+    pagerSize: 10
 
 permalinks:
     post: /p/:slug/
@@ -60,8 +60,9 @@ params:
         # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
 
     footer:
-        since: 2025
-        customText:
+        since: 
+        customText: <a href="https://beian.miit.gov.cn/" target="_blank">备案号</a>
+                    <a href="https://beian.miit.gov.cn/" target="_blank">渝ICP备2023007666号-1</a>
 
     dateFormat:
         published: 2006-01-02
@@ -76,16 +77,16 @@ params:
             src: img/avatar.png
 
     article:
-        math: false
+        math: true
         toc: true
         readingTime: true
         license:
             enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
+            default: 版权由文章作者拥有
 
     comments:
         enabled: true
-        provider: disqus
+        provider: waline
 
         disqusjs:
             shortname:

@@ -1,0 +1,16 @@
+{{- $ThemeVersion := "3.30.0" -}}
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
+            {{ .Site.Params.footer.since }} - 
+        {{ end }}
+        {{ now.Format "2006" }} {{ default .Site.Title .Site.Copyright }}
+    </section>
+        <!-- Add blog running time -->
+        <section class="running-time">
+            本博客已稳定运行
+            <span id="runningdays" class="running-days"></span>
+        </section>
+    
+</footer>

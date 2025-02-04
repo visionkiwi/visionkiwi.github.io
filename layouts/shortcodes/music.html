@@ -1,0 +1,30 @@
+<!-- require APlayer -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<style type="text/css">
+  /* Custom Dark theme styles */
+  .dark-theme .aplayer { background: #212121; }
+  .dark-theme .aplayer.aplayer-withlist .aplayer-info { border-bottom-color: #5c5c5c; }
+  /* Add other custom styles here */
+</style>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
+{{ if .IsNamedParams }}
+  <meting-js
+    id="{{ .Get "id" }}"
+    server="{{ .Get "server" }}"
+    type="{{ .Get "type" }}"
+    fixed="{{ if .Get "fixed" }}{{ .Get "fixed" }}{{ else }}false{{ end }}"
+    mini="{{ if .Get "mini" }}{{ .Get "mini" }}{{ else }}false{{ end }}"
+    autoplay="{{ if .Get "autoplay" }}{{ .Get "autoplay" }}{{ else }}false{{ end }}"
+    loop="{{ if .Get "loop" }}{{ .Get "loop" }}{{ else }}none{{ end }}"
+    theme="{{ if .Get "theme" }}{{ .Get "theme" }}{{ else }}#255579{{ end }}"
+    volume="{{ if .Get "volume" }}{{ .Get "volume" }}{{ else }}0.6{{ end }}"
+    preload="{{ if .Get "preload" }}{{ .Get "preload" }}{{ else }}auto{{ end }}"
+    mutex="{{ if .Get "mutex" }}{{ .Get "mutex" }}{{ else }}true{{ end }}"
+    list-folded="{{ if .Get "list-folded" }}{{ .Get "list-folded" }}{{ else }}true{{ end }}">
+  </meting-js>
+{{ end }}
+
