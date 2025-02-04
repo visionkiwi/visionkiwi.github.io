@@ -6,10 +6,10 @@
 
 <link rel='canonical' href='https://visionkiwi.github.io/%E5%85%B3%E4%BA%8E/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="关于">
+<link rel="stylesheet" href="/scss/style.min.5f504e830b05c0d83115bcb8a9cfa3785c75032b1c4f3345df0027e4a24913c7.css"><meta property='og:title' content="关于">
 <meta property='og:description' content="This is a test page for i18n support.\n">
 <meta property='og:url' content='https://visionkiwi.github.io/%E5%85%B3%E4%BA%8E/'>
-<meta property='og:site_name' content='Vision'>
+<meta property='og:site_name' content='Vision | Sec'>
 <meta property='og:type' content='article'><meta property='article:section' content='Page' />
 <meta name="twitter:title" content="关于">
 <meta name="twitter:description" content="This is a test page for i18n support.\n">
@@ -71,8 +71,8 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Vision</a></h1>
-            <h2 class="site-description">欢迎光临！！</h2>
+            <h1 class="site-name"><a href="/">Vision | Sec</a></h1>
+            <h2 class="site-description">买不起房子那就在网上安家吧</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -330,10 +330,36 @@
 
 
 
-        <span>Licensed under CC BY-NC-SA 4.0</span>
+        <span>版权由文章作者拥有</span>
     </section>
     </footer>
 
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
 
     
 </article>
@@ -345,46 +371,23 @@
      
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
 <style>
-    .disqus-container {
+    .waline-container {
         background-color: var(--card-background);
         border-radius: var(--card-border-radius);
         box-shadow: var(--shadow-l1);
         padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
     }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"]});
 </script>
 
     
@@ -393,13 +396,14 @@
     <section class="copyright">
         &copy; 
         
-        2025 渝ICP备2023007666号-1
+        2025 Vision | Sec
     </section>
+        
+        <section class="running-time">
+            本博客已稳定运行
+            <span id="runningdays" class="running-days"></span>
+        </section>
     
-    <section class="powerby">
-        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
-    </section>
 </footer>
 
 
@@ -499,6 +503,32 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+
+    
+    let s1 = '2025-2-2'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+
+
+
 
     </body>
 </html>

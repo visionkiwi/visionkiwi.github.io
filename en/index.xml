@@ -5,7 +5,6 @@
         <link>https://visionkiwi.github.io/en/</link>
         <description>Recent content on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <copyright>渝ICP备2023007666号-1</copyright><atom:link href="https://visionkiwi.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+        <language>en</language><atom:link href="https://visionkiwi.github.io/en/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

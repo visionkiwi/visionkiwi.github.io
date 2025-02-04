@@ -2,18 +2,18 @@
 <html lang="zh-cn" dir="ltr">
     <head>
 	<meta name="generator" content="Hugo 0.143.0"><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="欢迎光临！！">
-<title>Vision</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="买不起房子那就在网上安家吧">
+<title>Vision | Sec</title>
 
 <link rel='canonical' href='https://visionkiwi.github.io/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Vision">
-<meta property='og:description' content="欢迎光临！！">
+<link rel="stylesheet" href="/scss/style.min.5f504e830b05c0d83115bcb8a9cfa3785c75032b1c4f3345df0027e4a24913c7.css"><meta property='og:title' content="Vision | Sec">
+<meta property='og:description' content="买不起房子那就在网上安家吧">
 <meta property='og:url' content='https://visionkiwi.github.io/'>
-<meta property='og:site_name' content='Vision'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-02T17:47:40&#43;08:00 '/>
-<meta name="twitter:title" content="Vision">
-<meta name="twitter:description" content="欢迎光临！！"><link rel="alternate" type="application/rss&#43;xml" href="https://visionkiwi.github.io/index.xml">
+<meta property='og:site_name' content='Vision | Sec'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-04T01:20:40&#43;08:00 '/>
+<meta name="twitter:title" content="Vision | Sec">
+<meta name="twitter:description" content="买不起房子那就在网上安家吧"><link rel="alternate" type="application/rss&#43;xml" href="https://visionkiwi.github.io/index.xml">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -70,8 +70,8 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Vision</a></h1>
-            <h2 class="site-description">欢迎光临！！</h2>
+            <h1 class="site-name"><a href="/">Vision | Sec</a></h1>
+            <h2 class="site-description">买不起房子那就在网上安家吧</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -347,6 +347,18 @@
     
     
 
+<div class="welcome">
+  <p style="font-size: 2rem; text-align: center; font-weight: bold">
+    <span class="shake">👋</span>
+    <span class="jump-text1" > Welcome</span>
+    <span class="jump-text2"> To </span>
+    <span class="jump-text3" style="color:#e99312">Vi</span><span class="jump-text4" style="color:#e99312">s</span><span class="jump-text5" style="color:#e99312">i</span><span class="jump-text6" style="color:#e99312">o</span><span class="jump-text7" style="color:#e99312">n</span><span class="jump-text8" style="color:#e99312">'s</span>
+    <span class="jump-text9" style="color:#e99312">Blog</span>
+  </p>
+</div>
+
+
+
     <section class="article-list">
         
             
@@ -380,7 +392,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2025-02-02</time>
+                <time class="article-time--published">2025-02-04</time>
             </div>
         
 
@@ -395,7 +407,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 0 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -413,13 +425,14 @@
     <section class="copyright">
         &copy; 
         
-        2025 渝ICP备2023007666号-1
+        2025 Vision | Sec
     </section>
+        
+        <section class="running-time">
+            本博客已稳定运行
+            <span id="runningdays" class="running-days"></span>
+        </section>
     
-    <section class="powerby">
-        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
-    </section>
 </footer>
 
             </main>
@@ -440,6 +453,32 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+
+    
+    let s1 = '2025-2-2'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+
+
+
 
     </body>
 </html>
