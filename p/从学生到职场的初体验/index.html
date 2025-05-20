@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 前言 此文我只讲底层逻辑，这个底层逻辑还是我个人认为的底层逻辑，所以所有观点都为个人观点和思想出发。这篇文章针对一些迷茫中的职场人士和一些刚进入大学里的大学生们或刚毕业的且刚步入社会的青年小伙伴，还有一些为孩子所操劳的父母们。\n">
-<title>作为大多数的普通人如何成为千万富翁</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 前言 很久没写文章了，我也不知道写什么，距离上一次写文章已经过去好几个月，中间写毕业论文、到处投简历找工作、准备面试、背面试题。中间还进入对赚钱这个概念中个人觉得是一瞬间顿悟感觉的情况，目前还在逐步践行，知行合一还是蛮难的，这是一场和人性对抗挑战赛，充满了未知和诱惑，难以抵抗却又后知后觉，难以言表，特以此文书写最近的心态变化以及最近来到外地进入职场后的感受和相距家乡上千公里的风土人情。\n">
+<title>从学生到职场的初体验</title>
 
-<link rel='canonical' href='https://visionkiwi.github.io/p/%E4%BD%9C%E4%B8%BA%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E5%8D%83%E4%B8%87%E5%AF%8C%E7%BF%81/'>
+<link rel='canonical' href='https://visionkiwi.github.io/p/%E4%BB%8E%E5%AD%A6%E7%94%9F%E5%88%B0%E8%81%8C%E5%9C%BA%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C/'>
 
-<link rel="stylesheet" href="/scss/style.min.5f504e830b05c0d83115bcb8a9cfa3785c75032b1c4f3345df0027e4a24913c7.css"><meta property='og:title' content="作为大多数的普通人如何成为千万富翁">
-<meta property='og:description' content=" 前言 此文我只讲底层逻辑，这个底层逻辑还是我个人认为的底层逻辑，所以所有观点都为个人观点和思想出发。这篇文章针对一些迷茫中的职场人士和一些刚进入大学里的大学生们或刚毕业的且刚步入社会的青年小伙伴，还有一些为孩子所操劳的父母们。\n">
-<meta property='og:url' content='https://visionkiwi.github.io/p/%E4%BD%9C%E4%B8%BA%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E5%8D%83%E4%B8%87%E5%AF%8C%E7%BF%81/'>
+<link rel="stylesheet" href="/scss/style.min.5f504e830b05c0d83115bcb8a9cfa3785c75032b1c4f3345df0027e4a24913c7.css"><meta property='og:title' content="从学生到职场的初体验">
+<meta property='og:description' content=" 前言 很久没写文章了，我也不知道写什么，距离上一次写文章已经过去好几个月，中间写毕业论文、到处投简历找工作、准备面试、背面试题。中间还进入对赚钱这个概念中个人觉得是一瞬间顿悟感觉的情况，目前还在逐步践行，知行合一还是蛮难的，这是一场和人性对抗挑战赛，充满了未知和诱惑，难以抵抗却又后知后觉，难以言表，特以此文书写最近的心态变化以及最近来到外地进入职场后的感受和相距家乡上千公里的风土人情。\n">
+<meta property='og:url' content='https://visionkiwi.github.io/p/%E4%BB%8E%E5%AD%A6%E7%94%9F%E5%88%B0%E8%81%8C%E5%9C%BA%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C/'>
 <meta property='og:site_name' content='Vision | Sec'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-04T14:40:35&#43;08:00'/><meta property='article:modified_time' content='2025-02-04T14:40:35&#43;08:00'/>
-<meta name="twitter:title" content="作为大多数的普通人如何成为千万富翁">
-<meta name="twitter:description" content=" 前言 此文我只讲底层逻辑，这个底层逻辑还是我个人认为的底层逻辑，所以所有观点都为个人观点和思想出发。这篇文章针对一些迷茫中的职场人士和一些刚进入大学里的大学生们或刚毕业的且刚步入社会的青年小伙伴，还有一些为孩子所操劳的父母们。\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-05-20T20:11:52&#43;08:00'/><meta property='article:modified_time' content='2025-05-20T20:11:52&#43;08:00'/>
+<meta name="twitter:title" content="从学生到职场的初体验">
+<meta name="twitter:description" content=" 前言 很久没写文章了，我也不知道写什么，距离上一次写文章已经过去好几个月，中间写毕业论文、到处投简历找工作、准备面试、背面试题。中间还进入对赚钱这个概念中个人觉得是一瞬间顿悟感觉的情况，目前还在逐步践行，知行合一还是蛮难的，这是一场和人性对抗挑战赛，充满了未知和诱惑，难以抵抗却又后知后觉，难以言表，特以此文书写最近的心态变化以及最近来到外地进入职场后的感受和相距家乡上千公里的风土人情。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME238XFZNC"></script>
@@ -297,58 +297,7 @@ var _hmt = _hmt || [];
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#财富">财富</a></li>
-    <li><a href="#为什么选股指">为什么选股指</a></li>
-    <li><a href="#成为千万富翁">成为千万富翁</a>
-      <ol>
-        <li><a href="#公式解释">公式解释：</a></li>
-        <li><a href="#例子每月存入-3000-元月复利30-年">例子：每月存入 3000 元，月复利，30 年</a>
-          <ol>
-            <li><a href="#步骤-1计算">步骤 1：计算</a></li>
-            <li><a href="#步骤-2计算">步骤 2：计算</a></li>
-            <li><a href="#步骤-3计算未来价值">步骤 3：计算未来价值 </a></li>
-          </ol>
-        </li>
-        <li><a href="#复利的威力">复利的威力：</a>
-          <ol>
-            <li><a href="#复利的威力体现">复利的威力体现：</a></li>
-          </ol>
-        </li>
-        <li><a href="#总结">总结：</a></li>
-      </ol>
-    </li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
     <article class="main-article">
@@ -359,7 +308,7 @@ var _hmt = _hmt || [];
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E4%BD%9C%E4%B8%BA%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E5%8D%83%E4%B8%87%E5%AF%8C%E7%BF%81/">作为大多数的普通人如何成为千万富翁</a>
+            <a href="/p/%E4%BB%8E%E5%AD%A6%E7%94%9F%E5%88%B0%E8%81%8C%E5%9C%BA%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C/">从学生到职场的初体验</a>
         </h2>
     
         
@@ -381,7 +330,7 @@ var _hmt = _hmt || [];
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2025-02-04</time>
+                <time class="article-time--published">2025-05-20</time>
             </div>
         
 
@@ -396,7 +345,7 @@ var _hmt = _hmt || [];
 
 
                 <time class="article-time--reading">
-                    阅读时长: 6 分钟
+                    阅读时长: 4 分钟
                 </time>
             </div>
         
@@ -426,7 +375,7 @@ var _hmt = _hmt || [];
 
 
   <meting-js
-    id="13262135451"
+    id="13738800921"
     server="netease"
     type="playlist"
     fixed="false"
@@ -442,167 +391,36 @@ var _hmt = _hmt || [];
 
 
 
-<h2 id="前言">前言
-</h2><p>此文我只讲底层逻辑，这个底层逻辑还是我个人认为的底层逻辑，所以所有观点都为个人观点和思想出发。这篇文章针对一些迷茫中的职场人士和一些刚进入大学里的大学生们或刚毕业的且刚步入社会的青年小伙伴，还有一些为孩子所操劳的父母们。</p>
-<p><span style="background-color: yellow;"><strong>阅读此文请拥有此共识：财富一定会流向创造财富的地方去，文明也一定会汇集在高度文明发达之地。</strong></span></p>
-<p><strong>本文定义的普通人（月入&lt;1万）</strong></p>
-<h2 id="财富">财富
-</h2><p>简单来说就两个地方：掠夺和创造</p>
-<p><strong>创造财富简单来说也是两个地方：生成资料和生产力</strong></p>
-<p>这里扪心自问一下，你有什么生产力和生产资料。那么既然作为普通人生产力和生产资料没多大差异性，基本上大同小异。如果你有一些差异性那么你就会在普通人中脱颖而出。这个差异性我相信有些人是有的，可能自己没有发觉，有些发觉了但是没有突出这个差异性给自己带来利益。</p>
-<p><strong>例如：</strong> 有一部分人打游戏很厉害，这一部分人属于少数，那么这一部分少数人中又有一些人因为乱七八糟的事情或着各种各样的条件限制导致自己无法专心走这一条路。但是却也有少比例的人走上了职业、代练、技术主播的路线。为什么我要说技术主播呢，因为直播不只有技术主播这一条路，直播是一个娱乐为主导内容的行业，那么能给观看直播的观众带来节目效果的直播内容也能在直播这条路脱颖而出。所以找寻自己在大多数人中突出的点，然后增长长板，让优势更加巨大，在大多数人中脱颖而出。</p>
-<p><strong>少数就是少数，我不认为我属于少数，我也不认为我就特别，所以我就聊聊如何通过普通人达到资产千万</strong></p>
-<p><strong>那么除掉差异性之外，对所有人都公平的是什么？</strong></p>
-<ol>
-<li>时间：每天就24小时，每小时就60分钟，每分钟就60秒，绝对公平</li>
-<li>公理和公式：所有的数学、物理、化学等理工科定理机会对所有人都是公平的</li>
-<li><strong>股指基金：它涨 1% 那么它对所有人涨 1%，跌1% 同样所有人都跌 1%</strong></li>
-</ol>
-<p><strong>那么股指基金我个人认为最好的是哪些？</strong></p>
-<blockquote>
-<p><strong>标准普尔500</strong></p>
-<p><strong>道琼斯</strong></p>
-<p><strong>纳斯达克</strong></p></blockquote>
-<h2 id="为什么选股指">为什么选股指
-</h2><p><strong>那么就有小伙伴要问了，为什么选它？为什么不选股票？</strong></p>
-<p>这个问题其实蛮简单的，当你选了一支股票，这支股票涨 8% 那么你就收获 8% ，如果股票跌了 8% ，那么你就亏损了 8%。所以个别股票对所有人而言不是绝对公平的。</p>
-<p>比如说，它对它的股东和它对你而言、它对它公司的高管和它对你而言。你觉得作为普通人的你，信息源有他清楚吗？你觉得你做出决策的时间能比他及时吗，你觉得他的涨幅对你和对他也是公平的吗？</p>
-<p><strong>那么在此我提出一个赌场问题给你思考一下。</strong></p>
-<ul>
-<li>A有100万筹码，你有1万筹码。</li>
-<li>每轮游戏时，两人各自抽一张牌，抽到“大”一方可以赢得对方筹码的一半，抽到“小”则无变化。</li>
-<li>游戏继续进行，直到某一方破产</li>
-</ul>
-<p>结论其实也很显而易见，A基本稳赢，这就是一个简单的概率问题。所以你对于某些股票而言，最后获取利润的概率最大的人就是你们嘴中说到的庄家的那帮人。但是三大指数没有人可以操作得动，甚至以现在的各种庄家的体量而言，市值3000亿美金以上的股票也几乎没有任何一家机构可以操作得动，所以建议要么买股指基金要么买巨头(苹果、英伟达、meta)。</p>
-<p>根据我们本文的共识，理论上在一个正常的股市是聚集不断创造新财富公司的地方，那么这个地方一定是上涨的。那么事实上近30年：</p>
-<blockquote>
-<p><strong>标普500（近30年）：年化 12.2%     （ps：近10年 4倍多）</strong></p>
-<p><strong>道琼斯（近30年）：年化9.2%           （ps：近10年 3倍多）</strong></p>
-<p><strong>纳斯达克（近30年）：年化13.5%     （ps：近10年 6倍多）</strong></p></blockquote>
-<p><strong>既然年化这么好为什么还是有人不买呢，还是人性，贪嗔痴。想要更多。赌徒心理，成为韭菜</strong></p>
-<p><span style="background-color: yellow;"><strong>快则慢，慢则快</strong></span></p>
-<p><strong>只需要等待，等花开</strong></p>
-<p><img src="https://cdn-news.jin10.com/76cb7e14-7b80-49ab-b458-8fac07322dda.png"
-	
-	
-	
+<h1 id="前言">前言
+</h1><p>很久没写文章了，我也不知道写什么，距离上一次写文章已经过去好几个月，中间写毕业论文、到处投简历找工作、准备面试、背面试题。中间还进入对赚钱这个概念中个人觉得是一瞬间顿悟感觉的情况，目前还在逐步践行，知行合一还是蛮难的，这是一场和人性对抗挑战赛，充满了未知和诱惑，难以抵抗却又后知后觉，难以言表，特以此文书写最近的心态变化以及最近来到外地进入职场后的感受和相距家乡上千公里的风土人情。</p>
+<p>那么我们按照时间线一点一点的拉拉家常</p>
+<p><span style="background-color: yellow;"><strong>注：技术文章我陆续会跟上，目前因为工作原因不方便写一些现在用到的思路和方法。对此，鄙人对上文给出的承诺倍感抱歉</strong></span></p>
+<h1 id="论文">论文
+</h1><p>先说一下笔者的学历背景，我的学历背景有点稍微特殊一点，专升本，对！就是那比半步巅峰的专科学历稍微强那么一丢丢的同时又比高考统考上本的垃圾那么一丢丢的两边阵营都不待见的专升本。所以，很难受。因为要在两年的时间内修满学分，所以当其他大三完后就可以出去实习的时候，我们专升本的还在吭呲吭呲的上大四，比较友好的是我们大四就上一学期，而且我们的大四第一学期最后一个月就开始论文的开题答辩了，对比其他朋友来说最后我们最后答辩的时间确实比他们快了不少，至少都要快了半个月。</p>
+<p>说会正题，对于论文来说笔者这种学术垃圾肯定是写不出来什么好货的，那肯定是要借助新制生产力 <code>AI</code> 的帮助，笔者作为 <code>chatgpt</code> 的忠实粉丝几乎没用过其他 <code>AI</code> ，也不是说完全没用过，而是用惯了 <code>chatgpt</code> 用其他的也觉得也就那样吧，这里顺便提一嘴，笔者用 <code>mac book M3</code> 搭建了一个 <code>deepseek</code> 14B 还是 16B ，具体我忘了，反正就是不好用，我问一个问题起码得转圈圈30秒以上才回复给我，并且电脑非常的烫，笔者的 <code>mac</code> 是 <code>air</code> 没有风扇。</p>
+<p>基本上靠着 <code>chatgpt</code> 写完了论文，后面学校通知要查 <code>AI</code> ，这就不得提到 <code>AI</code> 打败<code>AI</code> 了，当然了也并不是全是 <code>AI</code> 帮助写完了论文还有很多自己的想法和思路，同时作品部分也是通过 <code>cursor</code> 的帮助下完美的完成。</p>
+<p>洋洋洒洒也没写几个字，因为我觉得对于普通高校的本科毕业论文来说主要还是看你态度端正与否，只要论文和作品不要太烂，能看着过得去，基本上老师还是很仁慈的，毕竟普通高校的大学生大家都心知肚明在大学学了些啥，即使确实学到了不少东西，但是就本科的层次来说做一个非常原创性的东西还是很难的，但是也并无可能。对大多数的普通高校毕业生而言还是完成就行，别太烂，态度端正。</p>
+<h1 id="钱">钱
+</h1><p>我之前一直很信没钱就得要梭哈得 <code>All in</code> ，慢慢的就发现这样还是不行，太年轻的想法，或者对于以前的我来说还是太不成熟，过于想当然。那么我是如何有改变的，其实也见得很难，就是在欧意交易所上去爆仓几次归零并且对自己的生活受到影响的时候，我发现这是一种对自己不负责的方式。</p>
+<p>我如何做的？</p>
+<p>第一步定投 <code>BTC</code> ，为什么定投这个，原因就是因为我相信。没有其他的，我相信就够了，其他的再多理由都是为了这个结果而找的。即使你反对你也能找到很多理由，所以没必要在这上面浪费精力和时间。我相信就足够。</p>
+<p><img src="/p/%E4%BB%8E%E5%AD%A6%E7%94%9F%E5%88%B0%E8%81%8C%E5%9C%BA%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C/pkc.png"
+	width="1104"
+	height="660"
+	srcset="/p/%E4%BB%8E%E5%AD%A6%E7%94%9F%E5%88%B0%E8%81%8C%E5%9C%BA%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C/pkc_hu_9cbe6e42f2771c47.png 480w, /p/%E4%BB%8E%E5%AD%A6%E7%94%9F%E5%88%B0%E8%81%8C%E5%9C%BA%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C/pkc_hu_9894237705410a9a.png 1024w"
 	loading="lazy"
 	
-		alt="过去30年全球七大股市的成绩单-市场参考-金十数据"
+		alt="pkc.png"
 	
 	
-></p>
-<p>从长期来看持有正规股市股票的伙伴们你们一定会收到上涨的财富。</p>
-<p><span style="background-color: yellow;"><strong>回归主题，现在我们有对所有人都公平的时间，它是我们生产资料之一。第二、投资股指基金的机会，它也是我们的生产资料之一。第三、一些数学公理等</strong></span></p>
-<h2 id="成为千万富翁">成为千万富翁
-</h2><p><span style="background-color: yellow;"><strong>你是愿意背30年房贷还是愿意忍受30年成为千万富翁（详细见后面数学公式）</strong></span></p>
-<hr>
-<p><strong>30年后都五六十了，有这些钱有什么用？</strong></p>
-<p><strong>可是有多少人到五六十了连100万都没有，但是你拿的是1000万能很快到手到现钱</strong></p>
-<hr>
-<p><strong>存不下来钱怎么办？</strong></p>
-<p><strong>推荐一本书：《邻居的百万富翁》</strong></p>
-<p><strong>给我激励存钱的一段话如下图</strong></p>
-<p><strong>大致翻译如下：</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">赚到第一笔10万美元跟个婊子一样难受，但你必须做到。
-</span></span><span class="line"><span class="cl">我不管你得付出什么——如果需要，步行出门，
-</span></span><span class="line"><span class="cl">吃的东西也只能是靠优惠券买的，
-</span></span><span class="line"><span class="cl">总之，想办法搞到那10万美元。
-</span></span><span class="line"><span class="cl">等你有了第一桶金，接下来就可以稍微放松一点了。
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">查理·芒格
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><img src="https://pbs.twimg.com/media/Gh05YepWoAAfi7H.jpg:large"
-	
-	
-	
-	loading="lazy"
-	
-		alt="The Forex Complex on X: “Charlie Munger once said: “The first $100,000 is a  bitch, but you gotta do it.” Here are his 5 money rules to make your first  $100k (without"
-	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="401px"
 	
 ></p>
-<p><strong>我想，作为理性且聪明的你已经有答案。</strong></p>
-<p>根据以上的内容我们拥有了时间、投资股指基金的机会、数学公理，那么现在我们去实现它，让一个普通人30年成为千万富翁</p>
-<hr>
-<h3 id="公式解释">公式解释：
-</h3><p>复利公式用于计算定期存入一定金额（例如每月、每年）的投资或储蓄在未来的总金额。这个公式考虑了定期存入本金和利息不断复利积累的情况。</p>
-<p>公式：</p>
-$$
-FV = P \times \left(1 + \frac{r}{n}\right)^{nt} \times \frac{\left(1 + \frac{r}{n}\right)^{nt} - 1}{\frac{r}{n}}
-$$<p>其中：</p>
-<ul>
-<li>\(FV\)：未来价值（最终金额）</li>
-<li>\(P\)：每期存入的金额（例如每月存入的金额）</li>
-<li>\(r\)：年利率（以小数表示，如 5% 就是 0.05）</li>
-<li>\(n\)：每年复利的次数（例如每月复利时，\(n = 12\)）</li>
-<li>\(t\)：投资的总时间（单位：年）</li>
-</ul>
-<h3 id="例子每月存入-3000-元月复利30-年">例子：每月存入 3000 元，月复利，30 年
-</h3><p>假设：</p>
-<ul>
-<li>每月存入金额 \(P = 3000\) 元</li>
-<li>年利率 \(r = 0.05\)（5%）</li>
-<li>每年复利次数 \(n = 12\)（每月复利）</li>
-<li>投资年数 \(t = 30\) 年</li>
-</ul>
-<h4 id="步骤-1计算">步骤 1：计算
-</h4>$$
-\left(1 + \frac{r}{n}\right)^{nt}
-$$<p>首先，计算每月的利率：</p>
-$$
-\frac{r}{n} = \frac{0.05}{12} = 0.004167
-$$<p>然后，计算复利项：</p>
-$$
-\left(1 + \frac{r}{n}\right) = 1 + 0.004167 = 1.004167
-$$<p>接着，计算复利的次数 \(nt\)：</p>
-$$
-nt = 12 \times 30 = 360 \text{（即 30 年，共 360 个月）}
-$$<p>计算复利项的指数：</p>
-$$
-1.004167^{360} \approx 4.4677
-$$<h4 id="步骤-2计算">步骤 2：计算
-</h4>$$
-(\frac{\left(1 + \frac{r}{n}\right)^{nt} - 1}{\frac{r}{n}})
-$$<p>计算差值部分：</p>
-$$
-\left(1.004167^{360} - 1\right) = 4.4677 - 1 = 3.4677
-$$<p>然后，计算：</p>
-$$
-\frac{3.4677}{0.004167} \approx 831.141
-$$<h4 id="步骤-3计算未来价值">步骤 3：计算未来价值 \(FV\)
-</h4><p>现在，可以代入所有值来计算未来价值：</p>
-$$
-FV = 3000 \times 4.4677 \times 831.141 \approx 3000 \times 3720.146 = 11,160,438
-$$<p><strong>未来价值（\(FV\)）约为 11,160,438 元</strong>。</p>
-<h3 id="复利的威力">复利的威力：
-</h3><p>从上面的例子可以看到，尽管你每月只存入 3000 元，但由于复利的效应，在 30 年后，投资额的增长非常显著。这是因为每个月的利息不仅会让本金增值，还会让之前产生的利息继续产生利息，形成正向循环。</p>
-<h4 id="复利的威力体现">复利的威力体现：
-</h4><ol>
-<li>
-<p><strong>时间的作用</strong>：复利的威力在于时间的积累，随着投资时间的增长，复利的效应会越来越强。短期内，你可能看不出明显效果，但长期复利会显著增加最终的总金额。</p>
-</li>
-<li>
-<p><strong>利率的影响</strong>：即使是较低的年利率（如 5%），长期复利的效应仍然能让金额快速增长。</p>
-</li>
-<li>
-<p><strong>定期存入的累积效应</strong>：即使每个月存入相对较少的金额，经过 30 年的复利积累，最终的总金额仍然非常可观。</p>
-</li>
-</ol>
-<h3 id="总结">总结：
-</h3><p>通过每月定期存入 3000 元，经过 30 年的月复利，最终的金额将达到约 <strong>11,160,438 元</strong>。复利的关键在于时间和利息的持续积累，这也就是复利被称为“世界第八大奇迹”的原因。</p>
+<p>第二步我选择了 <code>CSGO</code> 饰品市场。因为笔者最近一年左右也爱上了玩 <code>CSGO</code> ，对于投资来说，自己喜欢用的或者经常使用产品都可以考虑如何去投资，这里举一个例子，在二十万到三十万价位选一款车，最后能角逐出来的选择的产品然后再去看他背后的公司并从长期来看很少有不赚钱或者在股票市场表现不好的。例如：小米汽车、苹果公司等等。最终的最终这些产品的消费者买不买单才能决定这家企业能不能长久，而不是 <code>PPT</code> 写得有多好，发布会吹得有多牛。这些有用吗，还是有用，段时期有用，风头一过啥都得看产品是否过硬能不能获得消费者的青睐。到此我就说了我对长期定投的看法大致就如此，所以我选择 <code>CSGO</code> 饰品市场，因为我自己也玩的同时我还能出租，购买几百块的中低端产品，风险也能可控，对于租金我也测算过，年化率能超过 <code>10%</code> ，所以比银行的利息还是多不少。</p>
+<h1 id="工作">工作
+</h1><p>找工作别急，真的别急，再急也没用，写到这里其实我不想写了的，我想后面再来填坑，因为上班太累了我想休息。先留个坑，我这几天没天写点，把这篇文章完善必不会辜负所望</p>
 
 </section>
 
