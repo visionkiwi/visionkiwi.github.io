@@ -1,107 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>VisionSec</title>
-        <link>https://visionkiwi.github.io/</link>
-        <description>Recent content on VisionSec</description>
+        <title>投资 on VisionSec</title>
+        <link>https://visionkiwi.github.io/categories/%E6%8A%95%E8%B5%84/</link>
+        <description>Recent content in 投资 on VisionSec</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>VisionSec</copyright>
-        <lastBuildDate>Thu, 18 Sep 2025 23:45:28 +0800</lastBuildDate><atom:link href="https://visionkiwi.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>2025年9月19日凌晨夜记</title>
-        <link>https://visionkiwi.github.io/p/2025%E5%B9%B49%E6%9C%8819%E6%97%A5%E5%87%8C%E6%99%A8%E5%A4%9C%E8%AE%B0/</link>
-        <pubDate>Thu, 18 Sep 2025 23:45:28 +0800</pubDate>
-        
-        <guid>https://visionkiwi.github.io/p/2025%E5%B9%B49%E6%9C%8819%E6%97%A5%E5%87%8C%E6%99%A8%E5%A4%9C%E8%AE%B0/</guid>
-        <description>&lt;img src="https://visionkiwi.github.io/p/2025%E5%B9%B49%E6%9C%8819%E6%97%A5%E5%87%8C%E6%99%A8%E5%A4%9C%E8%AE%B0/%E5%B1%B1%E6%9C%AC%E6%96%87%E7%B7%92.jpg" alt="Featured image of post 2025年9月19日凌晨夜记" /&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
-&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js&#34;&gt;&lt;/script&gt;
-
-&lt;meting-js
-  server=&#34;netease&#34;
-  type=&#34;playlist&#34;
-  id=&#34;14305636919&#34;
-  autoplay=&#34;true&#34;
-  loop=&#34;all&#34;
-  order=&#34;list&#34;
-  volume=&#34;0.6&#34;
-  mutex=&#34;true&#34;
-&gt;
-&lt;/meting-js&gt;
-
-&lt;script&gt;
-  
-  document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
-    const players = document.querySelectorAll(&#34;meting-js&#34;);
-    players.forEach(e =&gt; {
-      if (e.aplayer &amp;&amp; e.aplayer.audio.length &gt; 0) {
-        e.aplayer.audio[0].muted = false;
-      }
-    });
-  });
-&lt;/script&gt;
-
-
-&lt;script&gt;
-  
-  document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
-    const players = document.querySelectorAll(&#34;meting-js&#34;);
-    players.forEach(e =&gt; {
-      if (e.aplayer &amp;&amp; e.aplayer.audio.length &gt; 0) {
-        try {
-          e.aplayer.audio[0].muted = false;   
-          e.aplayer.play();                   
-        } catch (err) {
-          console.warn(&#34;自动播放被浏览器限制，需要用户交互触发。&#34;);
-        }
-      }
-    });
-  });
-&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;累了，去码头搞点薯条&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;开篇&#34;&gt;开篇
-&lt;/h2&gt;&lt;p&gt;半夜三更，思绪忽起，提笔无由，落笔之处全然谬想。然近月来所思所想，纷杂如浮萍，无根无依，聊作随记。所言皆为一时之见，浅陋难免，或有偏颇，或多疏漏。吾学识有限，阅历亦浅，恐难入君子法眼，唯望读者海涵一笑。&lt;/p&gt;
-&lt;p&gt;世事如潮，日夜推移，人心却往往停滞在某个念头上，久久不能散去。或因偶然一言而触动，或因旧事再忆而心生波澜。于是，思绪缠绕不休，像夜色里的风，时而急促，时而寂寥。今夜静坐，灯火微明，唯有笔墨相伴，姑且随心记下，权当与己对话。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;那就想到哪儿写到哪儿吧，随意妄为，哈哈哈哈…………&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;正文&#34;&gt;正文
-&lt;/h2&gt;&lt;p&gt;我现在是什么状态呢，用一段话来说的话就是：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;什么都不想做，就在床上懒着。但心里的某个地方，还在想着毫无进展的工作，急得不得了。这样的话，起来干活不就得了，却又不想起来。纵容我的人是我，紧逼我的人还是我。掉了点眼泪。
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;————山本文绪《然后，我就一个人了》
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/2025%E5%B9%B49%E6%9C%8819%E6%97%A5%E5%87%8C%E6%99%A8%E5%A4%9C%E8%AE%B0/%E5%B1%B1%E6%9C%AC%E6%96%87%E7%B7%92.jpg&#34;
-	width=&#34;970&#34;
-	height=&#34;600&#34;
-	srcset=&#34;https://visionkiwi.github.io/p/2025%E5%B9%B49%E6%9C%8819%E6%97%A5%E5%87%8C%E6%99%A8%E5%A4%9C%E8%AE%B0/%E5%B1%B1%E6%9C%AC%E6%96%87%E7%B7%92_hu_729d86d826308bb9.jpg 480w, https://visionkiwi.github.io/p/2025%E5%B9%B49%E6%9C%8819%E6%97%A5%E5%87%8C%E6%99%A8%E5%A4%9C%E8%AE%B0/%E5%B1%B1%E6%9C%AC%E6%96%87%E7%B7%92_hu_a80680f0ca816dc7.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;山本文緒&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;161&#34;
-		data-flex-basis=&#34;388px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;可惜的是我连工作都没有，哈哈哈，比这还烂。无所谓了，失败也是人生不可获少的体验，好好享受每种感受，每一个时间节点，每一次变化。我认为人生不是来生孩子、买房子、结婚…………完成所谓的物质追求的。我想起了一句网络梗**“去码头搞点薯条”** ，先关注当下，关注自身，少一些宏大叙事，多一些关注自己。什么 &lt;strong&gt;tmd&lt;/strong&gt; 忠君报国，什么 &lt;strong&gt;tmd&lt;/strong&gt; 仇视 “敌人”，这都是意识形态在把人变成人群，然后有共同的假想敌，一起去“抵抗”，这样就会达到内部的团结，劲儿往一处使。一盘散沙就成了一根实心柱子，结实而有力量。而人群中拥有特殊思想的就会被排挤甚至视为敌对。但，现在的社会中对这种越见包容，新时代新思想。随着发展的快速，同时也有很多没有跟上，我指的是思想上的。我从抖音中就得已见出，还有最近的微软后门事件。我在朋友圈中得了一个结论：&lt;strong&gt;没人关心微软是不是真的留后门，他们只希望看到“美帝亡我之心不死。”&lt;/strong&gt; ，我们是富了，比以前生活过好了很多，但是我们的心，我们的思想，貌似并没有和我们的发展速度一起跟上。很多人连基本的判断都没有（或许他们获得信息的渠道很单一，导致他们就知道他们认为第一的产品）。&lt;/p&gt;
-&lt;p&gt;前段时间的盘古大模型事件，我看抖音也有人在说，我看评论区和视频的风向就是**“他们在迫害某为，坏透了。什么什么境外势力”** 等等相关的话。我实在看不下去了就拿出论文中的截图啥的慢慢的科普，居然还吞评论，想起了网友的话：&lt;strong&gt;在抖音科普和在非洲支教没什么区别&lt;/strong&gt; 。还别说，真是这么回事儿。&lt;/p&gt;
-&lt;p&gt;最近长城防火墙数据泄漏，什么源码手册什么的都有。关于防火墙这个事儿，我只能说好坏参半，我指的不是这次泄漏事件，而是单纯指存在这么多年的长城防火墙。能看见我博客的基本上对于翻墙来说属于是手拿把掐，这么多年了你不瞎搞也没听说哪位被瞎扣帽子啊（极个别情况另说，我怀疑是找不到理由办他了，随边编的）。那么话又说回来，对于你翻出去他们的容忍度还是不错的。这玩意儿主要针对的是普罗大众，外面多少传销，多少邪教，多少乱七八糟的盘子，我想大家都应该知道，这方面国内做得确实没得说。国内这些人连个保健品都要被骗得死去活来的，那国外那些乱七八糟的东西有几个顶得住。这点我是很赞成政府的，这堵墙就目前来说还是需要的，至少短期内我觉得是必须要在的，而对于能翻出去这些人，人家也睁只眼闭只眼，不瞎搞就各自安好。&lt;/p&gt;
-&lt;p&gt;好了，不想写了，想到什么就写什么，下次想写再说，各位晚安，世界晚安。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;爱死了这个操蛋的世界，呜呼～！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;于9月19日凌晨 00:41 留&lt;/p&gt;
-&lt;p&gt;——By vision (可爱不过皮小皮)&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 20 May 2025 20:11:52 +0800</lastBuildDate><atom:link href="https://visionkiwi.github.io/categories/%E6%8A%95%E8%B5%84/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>从学生到职场的初体验</title>
         <link>https://visionkiwi.github.io/p/%E4%BB%8E%E5%AD%A6%E7%94%9F%E5%88%B0%E8%81%8C%E5%9C%BA%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
         <pubDate>Tue, 20 May 2025 20:11:52 +0800</pubDate>
@@ -426,39 +332,6 @@ $$&lt;p&gt;&lt;strong&gt;未来价值（\(FV\)）约为 11,160,438 元&lt;/stron
 &lt;/ol&gt;
 &lt;h3 id=&#34;总结&#34;&gt;总结：
 &lt;/h3&gt;&lt;p&gt;通过每月定期存入 3000 元，经过 30 年的月复利，最终的金额将达到约 &lt;strong&gt;11,160,438 元&lt;/strong&gt;。复利的关键在于时间和利息的持续积累，这也就是复利被称为“世界第八大奇迹”的原因。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Archives</title>
-        <link>https://visionkiwi.github.io/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://visionkiwi.github.io/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Links</title>
-        <link>https://visionkiwi.github.io/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://visionkiwi.github.io/links/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://visionkiwi.github.io/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://visionkiwi.github.io/search/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>关于</title>
-        <link>https://visionkiwi.github.io/%E5%85%B3%E4%BA%8E/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://visionkiwi.github.io/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
         </item>
         
