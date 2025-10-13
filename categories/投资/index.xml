@@ -7,7 +7,181 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>VisionSec</copyright>
-        <lastBuildDate>Tue, 20 May 2025 20:11:52 +0800</lastBuildDate><atom:link href="https://visionkiwi.github.io/categories/%E6%8A%95%E8%B5%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 13 Oct 2025 22:53:56 +0800</lastBuildDate><atom:link href="https://visionkiwi.github.io/categories/%E6%8A%95%E8%B5%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>从零到一：用 BitAddress 制作比特币冷钱包的完整教程</title>
+        <link>https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/</link>
+        <pubDate>Mon, 13 Oct 2025 22:53:56 +0800</pubDate>
+        
+        <guid>https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/BTC.jpg" alt="Featured image of post 从零到一：用 BitAddress 制作比特币冷钱包的完整教程" /&gt;&lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js&#34;&gt;&lt;/script&gt;
+
+&lt;meting-js
+  server=&#34;netease&#34;
+  type=&#34;playlist&#34;
+  id=&#34;14418113724&#34;
+  autoplay=&#34;true&#34;
+  loop=&#34;all&#34;
+  order=&#34;list&#34;
+  volume=&#34;0.6&#34;
+  mutex=&#34;true&#34;
+&gt;
+&lt;/meting-js&gt;
+
+&lt;script&gt;
+  
+  document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
+    const players = document.querySelectorAll(&#34;meting-js&#34;);
+    players.forEach(e =&gt; {
+      if (e.aplayer &amp;&amp; e.aplayer.audio.length &gt; 0) {
+        e.aplayer.audio[0].muted = false;
+      }
+    });
+  });
+&lt;/script&gt;
+
+
+&lt;script&gt;
+  
+  document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
+    const players = document.querySelectorAll(&#34;meting-js&#34;);
+    players.forEach(e =&gt; {
+      if (e.aplayer &amp;&amp; e.aplayer.audio.length &gt; 0) {
+        try {
+          e.aplayer.audio[0].muted = false;   
+          e.aplayer.play();                   
+        } catch (err) {
+          console.warn(&#34;自动播放被浏览器限制，需要用户交互触发。&#34;);
+        }
+      }
+    });
+  });
+&lt;/script&gt;
+
+&lt;strong&gt;注：建议先看完一遍博客后再去进行实操&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;准备一个电脑，最好是苹果电脑，恢复出厂设置，关闭所有网络&lt;/li&gt;
+&lt;li&gt;准备一个全新U盘&lt;/li&gt;
+&lt;li&gt;纸和笔（最好可以准备一个能刻录的钢板做密钥保存）&lt;/li&gt;
+&lt;li&gt;一台能连网的电脑&lt;/li&gt;
+&lt;li&gt;一个 VPN&lt;/li&gt;
+&lt;li&gt;交易所账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bitaddress-比特币钱包的介绍和使用方法&#34;&gt;bitaddress 比特币钱包的介绍和使用方法
+&lt;/h2&gt;&lt;p&gt;第一种方法：打开 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bitaddress.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.bitaddress.org/&lt;/a&gt;&lt;/strong&gt; 这个网站，不用 VPN 也可以打开。&lt;/p&gt;
+&lt;p&gt;第二种方法：在 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pointbiz/bitaddress.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/pointbiz/bitaddress.org&lt;/a&gt;&lt;/strong&gt; 下载源码在本地进行。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html.png&#34;
+	width=&#34;1520&#34;
+	height=&#34;536&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_cf5f959c9b7c3d84.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_f24ed736c865002d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress.org.html&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;283&#34;
+		data-flex-basis=&#34;680px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;普通钱包&#34;&gt;普通钱包
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E4%B8%BB%E9%A1%B5%E9%9D%A2.png&#34;
+	width=&#34;2940&#34;
+	height=&#34;1838&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E4%B8%BB%E9%A1%B5%E9%9D%A2_hu_d245712d9e75ecfc.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E4%B8%BB%E9%A1%B5%E9%9D%A2_hu_60b5c9347944d44b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress主页面.org&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;打开后你什么都点击不了，这个时候你不需要惊慌，你的鼠标随机移动生成随机的值，当 &lt;code&gt;randomness&lt;/code&gt; 加载为100%时，普通的比特币钱包就此诞生。在页面的最顶部可以点击你所熟悉的语言，你点击你选择的语言时页面不会因为你的点击而刷新。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%AE%80%E5%8D%95%E9%92%B1%E5%8C%85%E7%94%9F%E6%88%90.png&#34;
+	width=&#34;2940&#34;
+	height=&#34;1838&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%AE%80%E5%8D%95%E9%92%B1%E5%8C%85%E7%94%9F%E6%88%90_hu_42e6202069f30a30.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%AE%80%E5%8D%95%E9%92%B1%E5%8C%85%E7%94%9F%E6%88%90_hu_805b1aea317797c3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress简单钱包生成.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SHARE&lt;/code&gt; （左边二维码也可以扫描得到一样的效果）为公钥地址：1DsRQ3s7yPfHEGRKyAXBMwyAQduy5yPe6h
+&lt;code&gt;SECRT&lt;/code&gt; （右边二维码也可以扫描得到一样的效果）为私钥地址：L5Eq6n42vVzf7iaAWKaGPRB8NiGiQpHt8qDTkFmGTqowxttBds1U&lt;/p&gt;
+&lt;p&gt;公钥就是我们钱包的收货地址，当我们在交易所用法币兑换成 &lt;code&gt;BTC&lt;/code&gt; 之后，在发送到了钱包中，使用的地址就是这个公钥地址。&lt;/p&gt;
+&lt;p&gt;私钥就是这个钱包打开的唯一钥匙，当你需要提取冷钱包中的货币到其他地方去的时候，使用私钥就可以获得钱包的管理权，可以向任何你想发的地址发送 &lt;code&gt;BTC&lt;/code&gt; 。&lt;/p&gt;
+&lt;h3 id=&#34;纸钱包&#34;&gt;纸钱包
+&lt;/h3&gt;&lt;p&gt;纸钱包是目前安全性价比来说最好的一个，使用了 &lt;code&gt;BIP38&lt;/code&gt; 加密&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%BA%B8%E9%92%B1%E5%8C%85.png&#34;
+	width=&#34;2940&#34;
+	height=&#34;1838&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%BA%B8%E9%92%B1%E5%8C%85_hu_fe435d35dc7dc144.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%BA%B8%E9%92%B1%E5%8C%85_hu_c10eb23d586cbe4a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress纸钱包.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;生成的地址数根据自己的需求来，&lt;code&gt;BIP38&lt;/code&gt; 加密勾选上，密码自己设置一个，这个密码一定一定要记住，如果这个密码记不住，后续你要解开冷钱包即使你有密钥也解不开。然后点击右边的打印就看输出 &lt;code&gt;PDF&lt;/code&gt; 进行保存。&lt;/p&gt;
+&lt;h3 id=&#34;纸钱包解密&#34;&gt;纸钱包解密
+&lt;/h3&gt;&lt;img src=&#34;bitaddress纸钱包解密.png&#34; width=&#34;50%&#34; alt=&#34;bitaddress纸钱包解密.png&#34; style=&#34;display:block; margin:auto; width:60%;&#34;&gt;
+&lt;p&gt;这里我解释一下，首先，钱包详情那一栏输入你自己的密钥，然后输入 &lt;code&gt;BIP38&lt;/code&gt; 口令。解析出来的密钥和原来的完全不一样，不用惊慌，解析出来的才是正常能使用的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;那么这里有疑问了，一共有三个二维码，好几个密钥，哪一个才是解开钱包的呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一般来说我们发送虚拟货币的冷钱包地址是压缩格式，所以我们也默认使用压缩格式的。那么这里对应的密钥就是第二个&lt;/p&gt;
+&lt;p&gt;密钥：L2St6aEwi9VkfcrujhctAgoD2vVppfZKFLd5bEvHrLtNKxVToHge&lt;/p&gt;
+&lt;p&gt;这里可以直接用密钥在 &lt;code&gt;web3&lt;/code&gt; 钱包中直接登陆，也可以在 &lt;code&gt;web3&lt;/code&gt; 钱包中扫描二维码登录，效果都是一样的。&lt;/p&gt;
+&lt;p&gt;选择对应的 &lt;code&gt;Bitcoin&lt;/code&gt; 网络：&lt;/p&gt;
+&lt;p&gt;​    &lt;img src=&#34;Bitcoin网络.jpg&#34; alt=&#34;Bitcoin网络&#34; style=&#34;display:block; margin:auto; width:30%;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下图是登录后的效果：&lt;/p&gt;
+&lt;img src=&#34;web3热钱包登录.jpg&#34; alt=&#34;web3热钱包登录&#34; style=&#34;display:block; margin:auto; width:30%;&#34;&gt;
+&lt;p&gt;&lt;span style=&#34;background-color: RED;&#34;&gt;&lt;strong&gt;现在你已经成功了大半，你已经知道了钱包是如何生成的&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;冷钱包制作&#34;&gt;冷钱包制作
+&lt;/h2&gt;&lt;p&gt;在 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pointbiz/bitaddress.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/pointbiz/bitaddress.org&lt;/a&gt;&lt;/strong&gt; 下载源码然后放入 &lt;code&gt;U&lt;/code&gt; 盘中再拷入苹果笔记本电脑中(切记苹果笔记本电脑是恢复出厂设置的并且完全是离线状态，没有任何网络，蓝牙和隔空投送等只要是能外部通过数据连接的全部彻底断掉)。&lt;/p&gt;
+&lt;p&gt;然后打开下图中的 &lt;code&gt;bitaddress.org.html&lt;/code&gt; ，用浏览器打开&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html.png&#34;
+	width=&#34;1520&#34;
+	height=&#34;536&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_cf5f959c9b7c3d84.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_f24ed736c865002d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress.org.html&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;283&#34;
+		data-flex-basis=&#34;680px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;钱包的生成看上面，完全一样。我推荐用 &lt;strong&gt;纸钱包&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;密钥用纸记住，还有准备的钢板也可以刻录。密钥一定一定要绝缘，拍照都不行，要保持与世隔绝。&lt;/p&gt;
+&lt;p&gt;然后登录交易所，用法币兑换 &lt;code&gt;BTC&lt;/code&gt; ，最后进行提币（提币填入的地址为公钥地址），如下图：&lt;/p&gt;
+&lt;img src=&#34;提币.png&#34; alt=&#34;提币&#34; style=&#34;display:block; margin:auto; width:30%;&#34;&gt;
+&lt;p&gt;在 &lt;a class=&#34;link&#34; href=&#34;https://www.blockchain.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.blockchain.com/&lt;/a&gt; 这个网站上通过自己的公钥就可以监控账户的变动。&lt;/p&gt;
+&lt;img src=&#34;冷钱包监控.png&#34; alt=&#34;冷钱包监控&#34; style=&#34;display:block; margin:auto; width:70%;&#34;&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语
+&lt;/h2&gt;&lt;p&gt;受9神的&lt;a class=&#34;link&#34; href=&#34;https://coxxa.github.io/bitcoin-ahr999-HODL/#/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《囤比特币》&lt;/a&gt; 的影响，让鄙人也走上了这条囤比特币的道路，此文是我自己对这两天学习制作冷钱包和相关知识的一个总结。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>从学生到职场的初体验</title>
         <link>https://visionkiwi.github.io/p/%E4%BB%8E%E5%AD%A6%E7%94%9F%E5%88%B0%E8%81%8C%E5%9C%BA%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
         <pubDate>Tue, 20 May 2025 20:11:52 +0800</pubDate>

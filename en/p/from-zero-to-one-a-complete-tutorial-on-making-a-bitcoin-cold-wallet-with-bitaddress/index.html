@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2962595552963165"
+     crossorigin="anonymous"></script><meta name='description' content=" Note: It is recommended to read through the entire blog before starting the practical steps.\n">
+<title>From Zero to One: A Complete Tutorial on Making a Bitcoin Cold Wallet with BitAddress</title>
+
+<link rel='canonical' href='https://visionkiwi.github.io/en/p/from-zero-to-one-a-complete-tutorial-on-making-a-bitcoin-cold-wallet-with-bitaddress/'>
+
+<link rel="stylesheet" href="/scss/style.min.100fd785ec1bdba1e93bd807a0e81d3dd5c870b4f1b77386bc133d9e47fb033b.css"><meta property='og:title' content="From Zero to One: A Complete Tutorial on Making a Bitcoin Cold Wallet with BitAddress">
+<meta property='og:description' content=" Note: It is recommended to read through the entire blog before starting the practical steps.\n">
+<meta property='og:url' content='https://visionkiwi.github.io/en/p/from-zero-to-one-a-complete-tutorial-on-making-a-bitcoin-cold-wallet-with-bitaddress/'>
+<meta property='og:site_name' content='Example Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-10-13T22:53:56&#43;08:00'/><meta property='article:modified_time' content='2025-10-13T22:53:56&#43;08:00'/><meta property='og:image' content='https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/BTC.jpg' />
+<meta name="twitter:title" content="From Zero to One: A Complete Tutorial on Making a Bitcoin Cold Wallet with BitAddress">
+<meta name="twitter:description" content=" Note: It is recommended to read through the entire blog before starting the practical steps.\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/BTC.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/en/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_d9a4e9cd779e0f99.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🐳</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/en">Example Site</a></h1>
+            <h2 class="site-description">Example description</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://t.me/secdata'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://x.com/isionv2'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://visionkiwi.github.io/en/" selected>English</option>
+                                
+                                    <option value="https://visionkiwi.github.io/" >简体中文</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#preparation">Preparation</a></li>
+    <li><a href="#introduction-and-usage-of-bitaddress-bitcoin-wallet">Introduction and Usage of BitAddress Bitcoin Wallet</a>
+      <ol>
+        <li><a href="#standard-wallet">Standard Wallet</a></li>
+        <li><a href="#paper-wallet">Paper Wallet</a></li>
+        <li><a href="#paper-wallet-decryption">Paper wallet decryption</a></li>
+      </ol>
+    </li>
+    <li><a href="#cold-wallet-creation">Cold Wallet Creation</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/en/p/from-zero-to-one-a-complete-tutorial-on-making-a-bitcoin-cold-wallet-with-bitaddress/">
+                <img src="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/BTC_hu_20da41370bb433f5.jpg"
+                        srcset="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/BTC_hu_20da41370bb433f5.jpg 800w, /p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/BTC_hu_fa73ba44ec0b514d.jpg 1600w"
+                        width="800" 
+                        height="533" 
+                        loading="lazy"
+                        alt="Featured image of post From Zero to One: A Complete Tutorial on Making a Bitcoin Cold Wallet with BitAddress" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/en/categories/investment/" >
+                Investment
+            </a>
+        
+            <a href="/en/categories/bitcoin/" >
+                Bitcoin
+            </a>
+        
+            <a href="/en/categories/cryptocurrency/" >
+                Cryptocurrency
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/en/p/from-zero-to-one-a-complete-tutorial-on-making-a-bitcoin-cold-wallet-with-bitaddress/">From Zero to One: A Complete Tutorial on Making a Bitcoin Cold Wallet with BitAddress</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-10-13</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/" class="link">简体中文</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>
+
+<meting-js
+  server="netease"
+  type="playlist"
+  id="14418113724"
+  autoplay="true"
+  loop="all"
+  order="list"
+  volume="0.6"
+  mutex="true"
+>
+</meting-js>
+
+<script>
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const players = document.querySelectorAll("meting-js");
+    players.forEach(e => {
+      if (e.aplayer && e.aplayer.audio.length > 0) {
+        e.aplayer.audio[0].muted = false;
+      }
+    });
+  });
+</script>
+
+
+<script>
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const players = document.querySelectorAll("meting-js");
+    players.forEach(e => {
+      if (e.aplayer && e.aplayer.audio.length > 0) {
+        try {
+          e.aplayer.audio[0].muted = false;   
+          e.aplayer.play();                   
+        } catch (err) {
+          console.warn("自动播放被浏览器限制，需要用户交互触发。");
+        }
+      }
+    });
+  });
+</script>
+
+<p><strong>Note: It is recommended to read through the entire blog before starting the practical steps.</strong></p>
+<h2 id="preparation">Preparation
+</h2><ul>
+<li>Prepare a computer (preferably a Mac), perform a factory reset, and disconnect it from all networks.</li>
+<li>Prepare a brand-new USB drive.</li>
+<li>Paper and pen (ideally, also prepare a metal plate for engraving and securely storing your private key).</li>
+<li>Another computer with internet access.</li>
+<li>A VPN.</li>
+<li>A cryptocurrency exchange account.</li>
+</ul>
+<h2 id="introduction-and-usage-of-bitaddress-bitcoin-wallet">Introduction and Usage of BitAddress Bitcoin Wallet
+</h2><p><strong>Method 1:</strong> Open the website <strong><a class="link" href="https://www.bitaddress.org/"  target="_blank" rel="noopener"
+    >https://www.bitaddress.org/</a></strong> — it can be accessed without using a VPN.</p>
+<p><strong>Method 2:</strong> Download the source code from <strong><a class="link" href="https://github.com/pointbiz/bitaddress.org"  target="_blank" rel="noopener"
+    >https://github.com/pointbiz/bitaddress.org</a></strong> and run it locally.</p>
+<p><img src="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html.png"
+	width="1520"
+	height="536"
+	srcset="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_cf5f959c9b7c3d84.png 480w, /p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_f24ed736c865002d.png 1024w"
+	loading="lazy"
+	
+		alt="bitaddress.org.html"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="283"
+		data-flex-basis="680px"
+	
+></p>
+<h3 id="standard-wallet">Standard Wallet
+</h3><p><img src="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E4%B8%BB%E9%A1%B5%E9%9D%A2.png"
+	width="2940"
+	height="1838"
+	srcset="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E4%B8%BB%E9%A1%B5%E9%9D%A2_hu_d245712d9e75ecfc.png 480w, /p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E4%B8%BB%E9%A1%B5%E9%9D%A2_hu_60b5c9347944d44b.png 1024w"
+	loading="lazy"
+	
+		alt="bitaddress主页面.org"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="383px"
+	
+></p>
+<p>After opening the page, you won’t be able to click anything at first — don’t panic. As you move your mouse randomly, the system will generate random values, and when the <code>randomness</code> bar reaches 100%, a standard Bitcoin wallet will be created. At the top of the page, you can select your preferred language, and when you click to change the language, the page will not refresh or reload.</p>
+<p><img src="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%AE%80%E5%8D%95%E9%92%B1%E5%8C%85%E7%94%9F%E6%88%90.png"
+	width="2940"
+	height="1838"
+	srcset="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%AE%80%E5%8D%95%E9%92%B1%E5%8C%85%E7%94%9F%E6%88%90_hu_42e6202069f30a30.png 480w, /p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%AE%80%E5%8D%95%E9%92%B1%E5%8C%85%E7%94%9F%E6%88%90_hu_805b1aea317797c3.png 1024w"
+	loading="lazy"
+	
+		alt="bitaddress简单钱包生成.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="383px"
+	
+></p>
+<p><code>SHARE</code> (the QR code on the left can also be scanned for the same result) represents the <strong>public key address</strong>: <code>1DsRQ3s7yPfHEGRKyAXBMwyAQduy5yPe6h</code>.
+<code>SECRET</code> (the QR code on the right can also be scanned for the same result) represents the <strong>private key address</strong>: <code>L5Eq6n42vVzf7iaAWKaGPRB8NiGiQpHt8qDTkFmGTqowxttBds1U</code>.</p>
+<p>The <strong>public key</strong> is your wallet’s receiving address. When you exchange fiat currency for <code>BTC</code> on an exchange and transfer it to your wallet, this is the address you use to receive Bitcoin.</p>
+<p>The <strong>private key</strong> is the only key that unlocks your wallet. When you need to withdraw funds from your cold wallet to another address, using the private key grants you full control of the wallet, allowing you to send <code>BTC</code> anywhere you wish.</p>
+<h3 id="paper-wallet">Paper Wallet
+</h3><p>A <strong>paper wallet</strong> is currently one of the most secure and cost-effective options. It uses <strong>BIP38 encryption</strong> for enhanced security.</p>
+<p><img src="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%BA%B8%E9%92%B1%E5%8C%85.png"
+	width="2940"
+	height="1838"
+	srcset="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%BA%B8%E9%92%B1%E5%8C%85_hu_fe435d35dc7dc144.png 480w, /p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%BA%B8%E9%92%B1%E5%8C%85_hu_c10eb23d586cbe4a.png 1024w"
+	loading="lazy"
+	
+		alt="bitaddress纸钱包.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="383px"
+	
+></p>
+<p>The number of addresses you generate depends on your needs. Check the <code>BIP38</code> encryption option and set a password yourself — <strong>you must remember this password</strong>. If you forget it, you will not be able to decrypt the cold wallet later even if you still have the key. Then click the print button on the right and save the output as a <code>PDF</code>.</p>
+<h3 id="paper-wallet-decryption">Paper wallet decryption
+</h3><img src="bitaddress纸钱包解密.png" width="50%" alt="bitaddress纸钱包解密.png" style="display:block; margin:auto; width:60%;">
+<p>Here’s an explanation: First, in the wallet details section, enter your own private key and then input the <code>BIP38</code> passphrase. The key that is parsed will look completely different from the original — don’t panic. The parsed key is the one that can actually be used.</p>
+<p><strong>A question may arise here: there are three QR codes and multiple keys, which one is used to unlock the wallet?</strong></p>
+<p>Generally, cold wallet addresses for sending cryptocurrency use the compressed format, so we default to using the compressed format. The corresponding key here is the second one:</p>
+<p><strong>Key:</strong> <code>L2St6aEwi9VkfcrujhctAgoD2vVppfZKFLd5bEvHrLtNKxVToHge</code></p>
+<p>You can use this key to log in directly on a <code>web3</code> wallet, or scan the QR code in the <code>web3</code> wallet to log in — both methods work the same.</p>
+<p>Make sure to select the corresponding <strong>Bitcoin</strong> network.</p>
+<p>​    <img src="Bitcoin网络.jpg" alt="Bitcoin网络" style="display:block; margin:auto; width:30%;"></p>
+<p>The image below shows the result after logging in:</p>
+<img src="web3热钱包登录.jpg" alt="web3热钱包登录" style="display:block; margin:auto; width:30%;">
+<p><span style="background-color: RED;"><strong>Now you’ve already succeeded for the most part — you already know how the wallet is generated</strong></span></p>
+<h2 id="cold-wallet-creation">Cold Wallet Creation
+</h2><p>Download the source code from <strong><a class="link" href="https://github.com/pointbiz/bitaddress.org"  target="_blank" rel="noopener"
+    >https://github.com/pointbiz/bitaddress.org</a></strong> and copy it onto a USB drive. Then insert the USB into your MacBook (note: the MacBook must be factory-reset and completely offline — disable all network connections, Bluetooth, AirDrop, and any other interfaces that can connect to external devices).</p>
+<p>Then open the file <code>bitaddress.org.html</code> shown in the image below using a web browser.</p>
+<p><img src="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html.png"
+	width="1520"
+	height="536"
+	srcset="/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_cf5f959c9b7c3d84.png 480w, /p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_f24ed736c865002d.png 1024w"
+	loading="lazy"
+	
+		alt="bitaddress.org.html"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="283"
+		data-flex-basis="680px"
+	
+></p>
+<p>The wallet generation looks exactly the same as above. I recommend using a <strong>paper wallet</strong>.
+Write the private key down on paper (or engrave it on the prepared metal plate). The key <strong>must</strong> be kept completely isolated — do not take photos of it — keep it cut off from the world.</p>
+<p>Then log into an exchange, convert your fiat into <code>BTC</code>, and withdraw (the withdrawal address should be the public key address). The process looks like the screenshot above.</p>
+<img src="提币.png" alt="提币" style="display:block; margin:auto; width:30%;">
+<p>On <strong><a class="link" href="https://www.blockchain.com/"  target="_blank" rel="noopener"
+    >https://www.blockchain.com/</a></strong> you can monitor your wallet’s activity using your <strong>public address</strong>.</p>
+<img src="冷钱包监控.png" alt="冷钱包监控" style="display:block; margin:auto; width:70%;">
+<h2 id="conclusion">Conclusion
+</h2><p>Inspired by 9shen’s <a class="link" href="https://coxxa.github.io/bitcoin-ahr999-HODL/#/"  target="_blank" rel="noopener"
+    ><em>HODL Bitcoin</em></a>, I’ve also embarked on the journey of accumulating Bitcoin. This article is my own summary of the past couple of days’ learning on creating cold wallets and related knowledge.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>文章内容所有权皆为作者所有。</span>
+    </section>
+    
+<div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden/>
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+        
+        
+        <label class="qr-code-image" for="reward">
+            <img class="image" src="/images/wechat.png">
+            <div class="article-content">
+                <span>微信打赏</span>
+            </div>
+        </label>
+        <label class="qr-code-image" for="reward">
+            <img class="image" src="/images/alipay.png">
+            <div class="article-content">
+             <span>支付宝打赏</span>
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+</footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="visionkiwi/hugoblogtalks"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+        
+    <section class="copyright">
+        &copy; 
+        
+        2025 VisionSec
+    </section>
+    
+
+
+
+
+
+    <section class="powerby">
+        
+            文章内容所有权皆为作者所有 ｜ 静止转载搬运，如有转载搬运请表明文章原处 <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+
+
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

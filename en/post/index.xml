@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Example Site</title>
+        <link>https://visionkiwi.github.io/en/post/</link>
+        <description>Recent content in Posts on Example Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>VisionSec</copyright>
+        <lastBuildDate>Mon, 13 Oct 2025 22:53:56 +0800</lastBuildDate><atom:link href="https://visionkiwi.github.io/en/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>From Zero to One: A Complete Tutorial on Making a Bitcoin Cold Wallet with BitAddress</title>
+        <link>https://visionkiwi.github.io/en/p/from-zero-to-one-a-complete-tutorial-on-making-a-bitcoin-cold-wallet-with-bitaddress/</link>
+        <pubDate>Mon, 13 Oct 2025 22:53:56 +0800</pubDate>
+        
+        <guid>https://visionkiwi.github.io/en/p/from-zero-to-one-a-complete-tutorial-on-making-a-bitcoin-cold-wallet-with-bitaddress/</guid>
+        <description>&lt;img src="https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/BTC.jpg" alt="Featured image of post From Zero to One: A Complete Tutorial on Making a Bitcoin Cold Wallet with BitAddress" /&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js&#34;&gt;&lt;/script&gt;
+
+&lt;meting-js
+  server=&#34;netease&#34;
+  type=&#34;playlist&#34;
+  id=&#34;14418113724&#34;
+  autoplay=&#34;true&#34;
+  loop=&#34;all&#34;
+  order=&#34;list&#34;
+  volume=&#34;0.6&#34;
+  mutex=&#34;true&#34;
+&gt;
+&lt;/meting-js&gt;
+
+&lt;script&gt;
+  
+  document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
+    const players = document.querySelectorAll(&#34;meting-js&#34;);
+    players.forEach(e =&gt; {
+      if (e.aplayer &amp;&amp; e.aplayer.audio.length &gt; 0) {
+        e.aplayer.audio[0].muted = false;
+      }
+    });
+  });
+&lt;/script&gt;
+
+
+&lt;script&gt;
+  
+  document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
+    const players = document.querySelectorAll(&#34;meting-js&#34;);
+    players.forEach(e =&gt; {
+      if (e.aplayer &amp;&amp; e.aplayer.audio.length &gt; 0) {
+        try {
+          e.aplayer.audio[0].muted = false;   
+          e.aplayer.play();                   
+        } catch (err) {
+          console.warn(&#34;自动播放被浏览器限制，需要用户交互触发。&#34;);
+        }
+      }
+    });
+  });
+&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Note: It is recommended to read through the entire blog before starting the practical steps.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;preparation&#34;&gt;Preparation
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Prepare a computer (preferably a Mac), perform a factory reset, and disconnect it from all networks.&lt;/li&gt;
+&lt;li&gt;Prepare a brand-new USB drive.&lt;/li&gt;
+&lt;li&gt;Paper and pen (ideally, also prepare a metal plate for engraving and securely storing your private key).&lt;/li&gt;
+&lt;li&gt;Another computer with internet access.&lt;/li&gt;
+&lt;li&gt;A VPN.&lt;/li&gt;
+&lt;li&gt;A cryptocurrency exchange account.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;introduction-and-usage-of-bitaddress-bitcoin-wallet&#34;&gt;Introduction and Usage of BitAddress Bitcoin Wallet
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Method 1:&lt;/strong&gt; Open the website &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bitaddress.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.bitaddress.org/&lt;/a&gt;&lt;/strong&gt; — it can be accessed without using a VPN.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Method 2:&lt;/strong&gt; Download the source code from &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pointbiz/bitaddress.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/pointbiz/bitaddress.org&lt;/a&gt;&lt;/strong&gt; and run it locally.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html.png&#34;
+	width=&#34;1520&#34;
+	height=&#34;536&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_cf5f959c9b7c3d84.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_f24ed736c865002d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress.org.html&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;283&#34;
+		data-flex-basis=&#34;680px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;standard-wallet&#34;&gt;Standard Wallet
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E4%B8%BB%E9%A1%B5%E9%9D%A2.png&#34;
+	width=&#34;2940&#34;
+	height=&#34;1838&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E4%B8%BB%E9%A1%B5%E9%9D%A2_hu_d245712d9e75ecfc.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E4%B8%BB%E9%A1%B5%E9%9D%A2_hu_60b5c9347944d44b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress主页面.org&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After opening the page, you won’t be able to click anything at first — don’t panic. As you move your mouse randomly, the system will generate random values, and when the &lt;code&gt;randomness&lt;/code&gt; bar reaches 100%, a standard Bitcoin wallet will be created. At the top of the page, you can select your preferred language, and when you click to change the language, the page will not refresh or reload.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%AE%80%E5%8D%95%E9%92%B1%E5%8C%85%E7%94%9F%E6%88%90.png&#34;
+	width=&#34;2940&#34;
+	height=&#34;1838&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%AE%80%E5%8D%95%E9%92%B1%E5%8C%85%E7%94%9F%E6%88%90_hu_42e6202069f30a30.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%AE%80%E5%8D%95%E9%92%B1%E5%8C%85%E7%94%9F%E6%88%90_hu_805b1aea317797c3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress简单钱包生成.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SHARE&lt;/code&gt; (the QR code on the left can also be scanned for the same result) represents the &lt;strong&gt;public key address&lt;/strong&gt;: &lt;code&gt;1DsRQ3s7yPfHEGRKyAXBMwyAQduy5yPe6h&lt;/code&gt;.
+&lt;code&gt;SECRET&lt;/code&gt; (the QR code on the right can also be scanned for the same result) represents the &lt;strong&gt;private key address&lt;/strong&gt;: &lt;code&gt;L5Eq6n42vVzf7iaAWKaGPRB8NiGiQpHt8qDTkFmGTqowxttBds1U&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;public key&lt;/strong&gt; is your wallet’s receiving address. When you exchange fiat currency for &lt;code&gt;BTC&lt;/code&gt; on an exchange and transfer it to your wallet, this is the address you use to receive Bitcoin.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;private key&lt;/strong&gt; is the only key that unlocks your wallet. When you need to withdraw funds from your cold wallet to another address, using the private key grants you full control of the wallet, allowing you to send &lt;code&gt;BTC&lt;/code&gt; anywhere you wish.&lt;/p&gt;
+&lt;h3 id=&#34;paper-wallet&#34;&gt;Paper Wallet
+&lt;/h3&gt;&lt;p&gt;A &lt;strong&gt;paper wallet&lt;/strong&gt; is currently one of the most secure and cost-effective options. It uses &lt;strong&gt;BIP38 encryption&lt;/strong&gt; for enhanced security.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%BA%B8%E9%92%B1%E5%8C%85.png&#34;
+	width=&#34;2940&#34;
+	height=&#34;1838&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%BA%B8%E9%92%B1%E5%8C%85_hu_fe435d35dc7dc144.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress%E7%BA%B8%E9%92%B1%E5%8C%85_hu_c10eb23d586cbe4a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress纸钱包.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The number of addresses you generate depends on your needs. Check the &lt;code&gt;BIP38&lt;/code&gt; encryption option and set a password yourself — &lt;strong&gt;you must remember this password&lt;/strong&gt;. If you forget it, you will not be able to decrypt the cold wallet later even if you still have the key. Then click the print button on the right and save the output as a &lt;code&gt;PDF&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;paper-wallet-decryption&#34;&gt;Paper wallet decryption
+&lt;/h3&gt;&lt;img src=&#34;bitaddress纸钱包解密.png&#34; width=&#34;50%&#34; alt=&#34;bitaddress纸钱包解密.png&#34; style=&#34;display:block; margin:auto; width:60%;&#34;&gt;
+&lt;p&gt;Here’s an explanation: First, in the wallet details section, enter your own private key and then input the &lt;code&gt;BIP38&lt;/code&gt; passphrase. The key that is parsed will look completely different from the original — don’t panic. The parsed key is the one that can actually be used.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A question may arise here: there are three QR codes and multiple keys, which one is used to unlock the wallet?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Generally, cold wallet addresses for sending cryptocurrency use the compressed format, so we default to using the compressed format. The corresponding key here is the second one:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key:&lt;/strong&gt; &lt;code&gt;L2St6aEwi9VkfcrujhctAgoD2vVppfZKFLd5bEvHrLtNKxVToHge&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You can use this key to log in directly on a &lt;code&gt;web3&lt;/code&gt; wallet, or scan the QR code in the &lt;code&gt;web3&lt;/code&gt; wallet to log in — both methods work the same.&lt;/p&gt;
+&lt;p&gt;Make sure to select the corresponding &lt;strong&gt;Bitcoin&lt;/strong&gt; network.&lt;/p&gt;
+&lt;p&gt;​    &lt;img src=&#34;Bitcoin网络.jpg&#34; alt=&#34;Bitcoin网络&#34; style=&#34;display:block; margin:auto; width:30%;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The image below shows the result after logging in:&lt;/p&gt;
+&lt;img src=&#34;web3热钱包登录.jpg&#34; alt=&#34;web3热钱包登录&#34; style=&#34;display:block; margin:auto; width:30%;&#34;&gt;
+&lt;p&gt;&lt;span style=&#34;background-color: RED;&#34;&gt;&lt;strong&gt;Now you’ve already succeeded for the most part — you already know how the wallet is generated&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cold-wallet-creation&#34;&gt;Cold Wallet Creation
+&lt;/h2&gt;&lt;p&gt;Download the source code from &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pointbiz/bitaddress.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/pointbiz/bitaddress.org&lt;/a&gt;&lt;/strong&gt; and copy it onto a USB drive. Then insert the USB into your MacBook (note: the MacBook must be factory-reset and completely offline — disable all network connections, Bluetooth, AirDrop, and any other interfaces that can connect to external devices).&lt;/p&gt;
+&lt;p&gt;Then open the file &lt;code&gt;bitaddress.org.html&lt;/code&gt; shown in the image below using a web browser.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html.png&#34;
+	width=&#34;1520&#34;
+	height=&#34;536&#34;
+	srcset=&#34;https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_cf5f959c9b7c3d84.png 480w, https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/bitaddress_html_hu_f24ed736c865002d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bitaddress.org.html&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;283&#34;
+		data-flex-basis=&#34;680px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The wallet generation looks exactly the same as above. I recommend using a &lt;strong&gt;paper wallet&lt;/strong&gt;.
+Write the private key down on paper (or engrave it on the prepared metal plate). The key &lt;strong&gt;must&lt;/strong&gt; be kept completely isolated — do not take photos of it — keep it cut off from the world.&lt;/p&gt;
+&lt;p&gt;Then log into an exchange, convert your fiat into &lt;code&gt;BTC&lt;/code&gt;, and withdraw (the withdrawal address should be the public key address). The process looks like the screenshot above.&lt;/p&gt;
+&lt;img src=&#34;提币.png&#34; alt=&#34;提币&#34; style=&#34;display:block; margin:auto; width:30%;&#34;&gt;
+&lt;p&gt;On &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.blockchain.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.blockchain.com/&lt;/a&gt;&lt;/strong&gt; you can monitor your wallet’s activity using your &lt;strong&gt;public address&lt;/strong&gt;.&lt;/p&gt;
+&lt;img src=&#34;冷钱包监控.png&#34; alt=&#34;冷钱包监控&#34; style=&#34;display:block; margin:auto; width:70%;&#34;&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;Inspired by 9shen’s &lt;a class=&#34;link&#34; href=&#34;https://coxxa.github.io/bitcoin-ahr999-HODL/#/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;HODL Bitcoin&lt;/em&gt;&lt;/a&gt;, I’ve also embarked on the journey of accumulating Bitcoin. This article is my own summary of the past couple of days’ learning on creating cold wallets and related knowledge.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
