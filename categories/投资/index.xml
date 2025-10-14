@@ -13,53 +13,38 @@
         <pubDate>Mon, 13 Oct 2025 22:53:56 +0800</pubDate>
         
         <guid>https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;img src="https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/BTC.jpg" alt="Featured image of post 从零到一：用 BitAddress 制作比特币冷钱包的完整教程" /&gt;&lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
-&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js&#34;&gt;&lt;/script&gt;
-
-&lt;meting-js
-  server=&#34;netease&#34;
-  type=&#34;playlist&#34;
-  id=&#34;14418113724&#34;
-  autoplay=&#34;true&#34;
-  loop=&#34;all&#34;
-  order=&#34;list&#34;
-  volume=&#34;0.6&#34;
-  mutex=&#34;true&#34;
-&gt;
-&lt;/meting-js&gt;
-
+        <description>&lt;img src="https://visionkiwi.github.io/p/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E7%94%A8-bitaddress-%E5%88%B6%E4%BD%9C%E6%AF%94%E7%89%B9%E5%B8%81%E5%86%B7%E9%92%B1%E5%8C%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/BTC.jpg" alt="Featured image of post 从零到一：用 BitAddress 制作比特币冷钱包的完整教程" /&gt;&lt;div style=&#34;text-align:center; margin: 20px 0;&#34;&gt;
+  &lt;div style=&#34;display:inline-block; background:#f8f8f8; border-radius:16px; padding:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1);&#34;&gt;
+    &lt;img src=&#34;Luv(sic) pt6 Uyama Hiroto Remix Instrumentals.jpg&#34; alt=&#34;Luv(sic) pt6 Album&#34; style=&#34;width:200px; border-radius:12px; display:block; margin:auto;&#34;&gt;
+    &lt;h4 style=&#34;margin-top:10px;&#34;&gt;🎵 Luv(sic) pt6 (Uyama Hiroto Remix Instrumentals)&lt;/h4&gt;
+    &lt;p style=&#34;margin:-5px 0 10px 0; color:#555;&#34;&gt;Nujabes ft. Uyama Hiroto&lt;/p&gt;
+    &lt;audio id=&#34;myAudio&#34; controls autoplay muted loop style=&#34;width:100%; border-radius:8px;&#34;&gt;
+      &lt;source src=&#34;Luv(sic) pt6 Uyama Hiroto Remix Instrumentals.mp4&#34; type=&#34;audio/mp4&#34;&gt;
+      您的浏览器不支持音频播放。
+    &lt;/audio&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;script&gt;
-  
-  document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
-    const players = document.querySelectorAll(&#34;meting-js&#34;);
-    players.forEach(e =&gt; {
-      if (e.aplayer &amp;&amp; e.aplayer.audio.length &gt; 0) {
-        e.aplayer.audio[0].muted = false;
-      }
+document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+  const audio = document.getElementById(&#34;myAudio&#34;);
+  // Safari / Chrome 可能阻止自动播放，这里尝试先静音播放
+  const playPromise = audio.play();
+  if (playPromise !== undefined) {
+    playPromise.then(_ =&gt; {
+      // 播放成功后恢复声音
+      audio.muted = false;
+    }).catch(error =&gt; {
+      console.log(&#34;自动播放被阻止，等待用户点击后播放。&#34;);
+      // 用户点击页面任意位置后再播放
+      document.body.addEventListener(&#39;click&#39;, () =&gt; {
+        audio.muted = false;
+        audio.play();
+      }, { once: true });
     });
-  });
+  }
+});
 &lt;/script&gt;
-
-
-&lt;script&gt;
-  
-  document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
-    const players = document.querySelectorAll(&#34;meting-js&#34;);
-    players.forEach(e =&gt; {
-      if (e.aplayer &amp;&amp; e.aplayer.audio.length &gt; 0) {
-        try {
-          e.aplayer.audio[0].muted = false;   
-          e.aplayer.play();                   
-        } catch (err) {
-          console.warn(&#34;自动播放被浏览器限制，需要用户交互触发。&#34;);
-        }
-      }
-    });
-  });
-&lt;/script&gt;
-
-&lt;strong&gt;注：建议先看完一遍博客后再去进行实操&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：建议先看完一遍博客后再去进行实操&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;准备一个电脑，最好是苹果电脑，恢复出厂设置，关闭所有网络&lt;/li&gt;
